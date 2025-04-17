@@ -67,11 +67,14 @@ class CouponBondContinuous:
              return price
 
 if __name__ == '__main__':
+    # Discrete Bonds
     bond = ZeroCouponBond(1000, 2, 4)
     print("The price of the zero coupon bond is $%.2f" % bond.calc_price())
     Cbond = CouponBond(1000, 10, 3, 4)
     print("The price of the coupon bond is $%.2f" % Cbond.calc_price())
-    bond = ZeroCouponBondContinuous(1000, 2, 4)
-    print("The price of the continuous zero coupon bond is $%.2f" % bond.calc_price())
-    Cbond = CouponBondContinuous(1000, 10, 3, 4)
-    print("The price of the continuous coupon bond is $%.2f" % Cbond.calc_price())
+
+    # Continuous Bonds
+    bond_cont = ZeroCouponBondContinuous(1000, 2, 4)
+    print("The price of the continuous zero coupon bond is $%.2f" % bond_cont.calc_price())
+    Cbond_cont = CouponBondContinuous(1000, 10, 3, 4)
+    print("The price of the continuous coupon bond is $%.2f" % Cbond_cont.calc_price())
